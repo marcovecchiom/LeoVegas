@@ -1,0 +1,118 @@
+.wrapper {
+  padding: 0 6px;
+  margin-bottom: 2rem;
+}
+
+.info_panel {
+  padding: 5%;
+  color: #fff;
+  background: transparent;
+
+  @media (max-width: 720px) {
+    padding: 5%;
+  }
+
+  .overview {
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: 0.7rem;
+    height: inherit;
+    overflow: scroll;
+
+    @media (max-width: 720px) {
+      padding: 3px;
+    }
+
+    @media (max-width: 480px) {
+      height: 70%;
+    }
+  }
+
+  .panelFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 0 0.3rem;
+    flex-direction: row;
+  }
+
+  .title {
+    font-weight: 900;
+    margin-top: 1rem;
+  }
+}
+
+.overlay,
+.info_panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: inherit;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -ms-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+  backdrop-filter: blur(3px);
+}
+
+.info_panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.overlay {
+  color: #fff;
+  background-color: #111;
+}
+
+.card-body {
+  position: relative;
+  padding: 0;
+  height: 100%;
+}
+
+.year {
+  padding: 0.2rem 0 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  background: transparent;
+  border: none;
+
+  &:hover {
+    .overlay {
+      opacity: 0.6;
+    }
+
+    .info_panel {
+      display: flex;
+      opacity: 1;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  @media (max-width: 720px) {
+    background-color: transparent;
+  }
+}

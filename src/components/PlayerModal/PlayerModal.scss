@@ -1,0 +1,33 @@
+.modalDiv {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(91, 112, 131, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  background: rgba(45, 45, 44, 0.8);
+  border-radius: 12px;
+  min-width: 350px;
+  width: 50%;
+  padding: 10px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  .video-player {
+    max-width: 100%;
+  }
+
+  svg {
+    align-self: flex-end;
+  }
+}

@@ -1,5 +1,10 @@
-export const API_KEY = '8cac6dec66e09ab439c081b251304443'
-export const ENDPOINT = 'https://api.themoviedb.org/3'
-export const ENDPOINT_DISCOVER = ENDPOINT+'/discover/movie/?api_key='+API_KEY+'&sort_by=vote_count.desc'
-export const ENDPOINT_SEARCH = ENDPOINT+'/search/movie/?api_key='+API_KEY
-export const ENDPOINT_MOVIE = ENDPOINT+'/movie/507086?api_key='+API_KEY+'&append_to_response=videos'
+export const ENDPOINT_MOVIE = `${process.env.REACT_APP_ENDPOINT}/movie/`;
+export const ENDPOINT_DISCOVER = `${process.env.REACT_APP_ENDPOINT}/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&sort_by=vote_count.desc`;
+export const ENDPOINT_SEARCH = `${process.env.REACT_APP_ENDPOINT}/search/movie?api_key=${process.env.REACT_APP_API_KEY}`;
+export const ENDPOINT_STATUS_SUCCES = 'success';
+export const ENDPOINT_STATUS_NOTFOUND = 'notfound';
+export const ENDPOINT_STATUS_LOADING = 'loading';
+export const ENDPOINT_STATUS_ERROR = 'error';
+export const ENDPOINT_STATUS_INITIAL = 'initial';
+export const VIDEO_TYPE_TRAILER = 'trailer';
+export const ICON_SIZE = '20px';
